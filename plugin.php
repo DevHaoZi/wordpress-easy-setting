@@ -1,11 +1,13 @@
 <?php
 /**
- * Plugin Name: WordPress Settings API
- * Plugin URI: https://tareq.co/2012/06/wordpress-settings-api-php-class/
- * Description: WordPress Settings API testing
- * Author: Tareq Hasan
- * Author URI: https://tareq.co
+ * Plugin Name: WordPress Easy Setting
+ * Plugin URI: https://www.ibadboy.net
+ * Description: 这个库封装了WordPress自带的Settings API并提供简洁明了的调用方法。
+ * Author: Xiyuan Sun <sxy@ibadboy.net>
+ * Author URI: https://www.ibadboy.net
  * Version: 1.3
+ * License: GPLv3 or later
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */
 
 require_once dirname( __FILE__ ) . '/src/class.settings-api.php';

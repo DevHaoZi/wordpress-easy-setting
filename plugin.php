@@ -5,7 +5,7 @@
  * Description: 这个库封装了WordPress自带的Settings API并提供简洁明了的调用方法。
  * Author: Xiyuan Sun <sxy@ibadboy.net>
  * Author URI: https://www.ibadboy.net
- * Version: 1.3
+ * Version: 1.4.0
  * License: GPLv3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  */

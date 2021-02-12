@@ -1,16 +1,18 @@
 <?php
 
 /**
- * weDevs Settings API wrapper class
+ * Easy Setting 库文件
  *
- * @version 1.3 (27-Sep-2016)
+ * 这是一个PHP类 ，只需要引入程序并按照示例中的方法使用即可
  *
- * @author Tareq Hasan <tareq@weDevs.com>
- * @link https://tareq.co Tareq Hasan
- * @example example/oop-example.php How to use the class
+ * @version 1.4
+ *
+ * @author Xiyuan Sun <sxy@ibadboy.net>
+ * @link https://www.ibadboy.net
+ * @example example/oop-example.php
  */
-if ( !class_exists( 'WeDevs_Settings_API' ) ):
-class WeDevs_Settings_API {
+if ( !class_exists( 'Easy_Setting' ) ):
+class Easy_Setting {
 
     /**
      * settings sections array

@@ -34,12 +34,12 @@ class Easy_Setting_Test {
     function get_settings_sections() {
         $sections = array(
             array(
-                'id'    => 'wedevs_basics',
-                'title' => __( 'Basic Settings', 'wedevs' )
+                'id'    => 'wes_basics',
+                'title' => __( 'Basic Settings', 'wes' )
             ),
             array(
-                'id'    => 'wedevs_advanced',
-                'title' => __( 'Advanced Settings', 'wedevs' )
+                'id'    => 'wes_advanced',
+                'title' => __( 'Advanced Settings', 'wes' )
             )
         );
         return $sections;
@@ -52,21 +52,21 @@ class Easy_Setting_Test {
      */
     function get_settings_fields() {
         $settings_fields = array(
-            'wedevs_basics' => array(
+            'wes_basics' => array(
                 array(
                     'name'              => 'text_val',
-                    'label'             => __( 'Text Input', 'wedevs' ),
-                    'desc'              => __( 'Text input description', 'wedevs' ),
-                    'placeholder'       => __( 'Text Input placeholder', 'wedevs' ),
+                    'label'             => __( 'Text Input', 'wes' ),
+                    'desc'              => __( 'Text input description', 'wes' ),
+                    'placeholder'       => __( 'Text Input placeholder', 'wes' ),
                     'type'              => 'text',
                     'default'           => 'Title',
                     'sanitize_callback' => 'sanitize_text_field'
                 ),
                 array(
                     'name'              => 'number_input',
-                    'label'             => __( 'Number Input', 'wedevs' ),
-                    'desc'              => __( 'Number field with validation callback `floatval`', 'wedevs' ),
-                    'placeholder'       => __( '1.99', 'wedevs' ),
+                    'label'             => __( 'Number Input', 'wes' ),
+                    'desc'              => __( 'Number field with validation callback `floatval`', 'wes' ),
+                    'placeholder'       => __( '1.99', 'wes' ),
                     'min'               => 0,
                     'max'               => 100,
                     'step'              => '0.01',
@@ -76,26 +76,26 @@ class Easy_Setting_Test {
                 ),
                 array(
                     'name'        => 'textarea',
-                    'label'       => __( 'Textarea Input', 'wedevs' ),
-                    'desc'        => __( 'Textarea description', 'wedevs' ),
-                    'placeholder' => __( 'Textarea placeholder', 'wedevs' ),
+                    'label'       => __( 'Textarea Input', 'wes' ),
+                    'desc'        => __( 'Textarea description', 'wes' ),
+                    'placeholder' => __( 'Textarea placeholder', 'wes' ),
                     'type'        => 'textarea'
                 ),
                 array(
                     'name'        => 'html',
-                    'desc'        => __( 'HTML area description. You can use any <strong>bold</strong> or other HTML elements.', 'wedevs' ),
+                    'desc'        => __( 'HTML area description. You can use any <strong>bold</strong> or other HTML elements.', 'wes' ),
                     'type'        => 'html'
                 ),
                 array(
                     'name'  => 'checkbox',
-                    'label' => __( 'Checkbox', 'wedevs' ),
-                    'desc'  => __( 'Checkbox Label', 'wedevs' ),
+                    'label' => __( 'Checkbox', 'wes' ),
+                    'desc'  => __( 'Checkbox Label', 'wes' ),
                     'type'  => 'checkbox'
                 ),
                 array(
                     'name'    => 'radio',
-                    'label'   => __( 'Radio Button', 'wedevs' ),
-                    'desc'    => __( 'A radio button', 'wedevs' ),
+                    'label'   => __( 'Radio Button', 'wes' ),
+                    'desc'    => __( 'A radio button', 'wes' ),
                     'type'    => 'radio',
                     'options' => array(
                         'yes' => 'Yes',
@@ -104,8 +104,8 @@ class Easy_Setting_Test {
                 ),
                 array(
                     'name'    => 'selectbox',
-                    'label'   => __( 'A Dropdown', 'wedevs' ),
-                    'desc'    => __( 'Dropdown description', 'wedevs' ),
+                    'label'   => __( 'A Dropdown', 'wes' ),
+                    'desc'    => __( 'Dropdown description', 'wes' ),
                     'type'    => 'select',
                     'default' => 'no',
                     'options' => array(
@@ -115,15 +115,15 @@ class Easy_Setting_Test {
                 ),
                 array(
                     'name'    => 'password',
-                    'label'   => __( 'Password', 'wedevs' ),
-                    'desc'    => __( 'Password description', 'wedevs' ),
+                    'label'   => __( 'Password', 'wes' ),
+                    'desc'    => __( 'Password description', 'wes' ),
                     'type'    => 'password',
                     'default' => ''
                 ),
                 array(
                     'name'    => 'file',
-                    'label'   => __( 'File', 'wedevs' ),
-                    'desc'    => __( 'File description', 'wedevs' ),
+                    'label'   => __( 'File', 'wes' ),
+                    'desc'    => __( 'File description', 'wes' ),
                     'type'    => 'file',
                     'default' => '',
                     'options' => array(
@@ -131,32 +131,32 @@ class Easy_Setting_Test {
                     )
                 )
             ),
-            'wedevs_advanced' => array(
+            'wes_advanced' => array(
                 array(
                     'name'    => 'color',
-                    'label'   => __( 'Color', 'wedevs' ),
-                    'desc'    => __( 'Color description', 'wedevs' ),
+                    'label'   => __( 'Color', 'wes' ),
+                    'desc'    => __( 'Color description', 'wes' ),
                     'type'    => 'color',
                     'default' => ''
                 ),
                 array(
                     'name'    => 'password',
-                    'label'   => __( 'Password', 'wedevs' ),
-                    'desc'    => __( 'Password description', 'wedevs' ),
+                    'label'   => __( 'Password', 'wes' ),
+                    'desc'    => __( 'Password description', 'wes' ),
                     'type'    => 'password',
                     'default' => ''
                 ),
                 array(
                     'name'    => 'wysiwyg',
-                    'label'   => __( 'Advanced Editor', 'wedevs' ),
-                    'desc'    => __( 'WP_Editor description', 'wedevs' ),
+                    'label'   => __( 'Advanced Editor', 'wes' ),
+                    'desc'    => __( 'WP_Editor description', 'wes' ),
                     'type'    => 'wysiwyg',
                     'default' => ''
                 ),
                 array(
                     'name'    => 'multicheck',
-                    'label'   => __( 'Multile checkbox', 'wedevs' ),
-                    'desc'    => __( 'Multi checkbox description', 'wedevs' ),
+                    'label'   => __( 'Multile checkbox', 'wes' ),
+                    'desc'    => __( 'Multi checkbox description', 'wes' ),
                     'type'    => 'multicheck',
                     'default' => array('one' => 'one', 'four' => 'four'),
                     'options' => array(

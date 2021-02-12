@@ -11,49 +11,49 @@
 /**
  * Registers settings section and fields
  */
-if ( !function_exists( 'wedevs_admin_init' ) ):
-    function wedevs_admin_init() {
+if ( !function_exists( 'wes_admin_init' ) ):
+    function wes_admin_init() {
 
         $sections = array(
             array(
-                'id' => 'wedevs_basics',
-                'title' => __( 'Basic Settings', 'wedevs' )
+                'id' => 'wes_basics',
+                'title' => __( 'Basic Settings', 'wes' )
             ),
             array(
-                'id' => 'wedevs_advanced',
-                'title' => __( 'Advanced Settings', 'wedevs' )
+                'id' => 'wes_advanced',
+                'title' => __( 'Advanced Settings', 'wes' )
             ),
             array(
-                'id' => 'wedevs_others',
+                'id' => 'wes_others',
                 'title' => __( 'Other Settings', 'wpuf' )
             )
         );
 
         $fields = array(
-            'wedevs_basics' => array(
+            'wes_basics' => array(
                 array(
                     'name' => 'text',
-                    'label' => __( 'Text Input', 'wedevs' ),
-                    'desc' => __( 'Text input description', 'wedevs' ),
+                    'label' => __( 'Text Input', 'wes' ),
+                    'desc' => __( 'Text input description', 'wes' ),
                     'type' => 'text',
                     'default' => 'Title'
                 ),
                 array(
                     'name' => 'textarea',
-                    'label' => __( 'Textarea Input', 'wedevs' ),
-                    'desc' => __( 'Textarea description', 'wedevs' ),
+                    'label' => __( 'Textarea Input', 'wes' ),
+                    'desc' => __( 'Textarea description', 'wes' ),
                     'type' => 'textarea'
                 ),
                 array(
                     'name' => 'checkbox',
-                    'label' => __( 'Checkbox', 'wedevs' ),
-                    'desc' => __( 'Checkbox Label', 'wedevs' ),
+                    'label' => __( 'Checkbox', 'wes' ),
+                    'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),
                 array(
                     'name' => 'radio',
-                    'label' => __( 'Radio Button', 'wedevs' ),
-                    'desc' => __( 'A radio button', 'wedevs' ),
+                    'label' => __( 'Radio Button', 'wes' ),
+                    'desc' => __( 'A radio button', 'wes' ),
                     'type' => 'radio',
                     'options' => array(
                         'yes' => 'Yes',
@@ -62,8 +62,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'multicheck',
-                    'label' => __( 'Multile checkbox', 'wedevs' ),
-                    'desc' => __( 'Multi checkbox description', 'wedevs' ),
+                    'label' => __( 'Multile checkbox', 'wes' ),
+                    'desc' => __( 'Multi checkbox description', 'wes' ),
                     'type' => 'multicheck',
                     'options' => array(
                         'one' => 'One',
@@ -74,8 +74,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'selectbox',
-                    'label' => __( 'A Dropdown', 'wedevs' ),
-                    'desc' => __( 'Dropdown description', 'wedevs' ),
+                    'label' => __( 'A Dropdown', 'wes' ),
+                    'desc' => __( 'Dropdown description', 'wes' ),
                     'type' => 'select',
                     'default' => 'no',
                     'options' => array(
@@ -85,50 +85,50 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'password',
-                    'label' => __( 'Password', 'wedevs' ),
-                    'desc' => __( 'Password description', 'wedevs' ),
+                    'label' => __( 'Password', 'wes' ),
+                    'desc' => __( 'Password description', 'wes' ),
                     'type' => 'password',
                     'default' => ''
                 ),
                 array(
                     'name' => 'file',
-                    'label' => __( 'File', 'wedevs' ),
-                    'desc' => __( 'File description', 'wedevs' ),
+                    'label' => __( 'File', 'wes' ),
+                    'desc' => __( 'File description', 'wes' ),
                     'type' => 'file',
                     'default' => ''
                 ),
                 array(
                     'name' => 'color',
-                    'label' => __( 'Color', 'wedevs' ),
-                    'desc' => __( 'Color description', 'wedevs' ),
+                    'label' => __( 'Color', 'wes' ),
+                    'desc' => __( 'Color description', 'wes' ),
                     'type' => 'color',
                     'default' => ''
                 )
             ),
-            'wedevs_advanced' => array(
+            'wes_advanced' => array(
                 array(
                     'name' => 'text',
-                    'label' => __( 'Text Input', 'wedevs' ),
-                    'desc' => __( 'Text input description', 'wedevs' ),
+                    'label' => __( 'Text Input', 'wes' ),
+                    'desc' => __( 'Text input description', 'wes' ),
                     'type' => 'text',
                     'default' => 'Title'
                 ),
                 array(
                     'name' => 'textarea',
-                    'label' => __( 'Textarea Input', 'wedevs' ),
-                    'desc' => __( 'Textarea description', 'wedevs' ),
+                    'label' => __( 'Textarea Input', 'wes' ),
+                    'desc' => __( 'Textarea description', 'wes' ),
                     'type' => 'textarea'
                 ),
                 array(
                     'name' => 'checkbox',
-                    'label' => __( 'Checkbox', 'wedevs' ),
-                    'desc' => __( 'Checkbox Label', 'wedevs' ),
+                    'label' => __( 'Checkbox', 'wes' ),
+                    'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),
                 array(
                     'name' => 'radio',
-                    'label' => __( 'Radio Button', 'wedevs' ),
-                    'desc' => __( 'A radio button', 'wedevs' ),
+                    'label' => __( 'Radio Button', 'wes' ),
+                    'desc' => __( 'A radio button', 'wes' ),
                     'type' => 'radio',
                     'default' => 'no',
                     'options' => array(
@@ -138,8 +138,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'multicheck',
-                    'label' => __( 'Multile checkbox', 'wedevs' ),
-                    'desc' => __( 'Multi checkbox description', 'wedevs' ),
+                    'label' => __( 'Multile checkbox', 'wes' ),
+                    'desc' => __( 'Multi checkbox description', 'wes' ),
                     'type' => 'multicheck',
                     'default' => array( 'one' => 'one', 'four' => 'four' ),
                     'options' => array(
@@ -151,8 +151,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'selectbox',
-                    'label' => __( 'A Dropdown', 'wedevs' ),
-                    'desc' => __( 'Dropdown description', 'wedevs' ),
+                    'label' => __( 'A Dropdown', 'wes' ),
+                    'desc' => __( 'Dropdown description', 'wes' ),
                     'type' => 'select',
                     'options' => array(
                         'yes' => 'Yes',
@@ -161,50 +161,50 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'password',
-                    'label' => __( 'Password', 'wedevs' ),
-                    'desc' => __( 'Password description', 'wedevs' ),
+                    'label' => __( 'Password', 'wes' ),
+                    'desc' => __( 'Password description', 'wes' ),
                     'type' => 'password',
                     'default' => ''
                 ),
                 array(
                     'name' => 'file',
-                    'label' => __( 'File', 'wedevs' ),
-                    'desc' => __( 'File description', 'wedevs' ),
+                    'label' => __( 'File', 'wes' ),
+                    'desc' => __( 'File description', 'wes' ),
                     'type' => 'file',
                     'default' => ''
                 ),
                 array(
                     'name' => 'color',
-                    'label' => __( 'Color', 'wedevs' ),
-                    'desc' => __( 'Color description', 'wedevs' ),
+                    'label' => __( 'Color', 'wes' ),
+                    'desc' => __( 'Color description', 'wes' ),
                     'type' => 'color',
                     'default' => ''
                 )
             ),
-            'wedevs_others' => array(
+            'wes_others' => array(
                 array(
                     'name' => 'text',
-                    'label' => __( 'Text Input', 'wedevs' ),
-                    'desc' => __( 'Text input description', 'wedevs' ),
+                    'label' => __( 'Text Input', 'wes' ),
+                    'desc' => __( 'Text input description', 'wes' ),
                     'type' => 'text',
                     'default' => 'Title'
                 ),
                 array(
                     'name' => 'textarea',
-                    'label' => __( 'Textarea Input', 'wedevs' ),
-                    'desc' => __( 'Textarea description', 'wedevs' ),
+                    'label' => __( 'Textarea Input', 'wes' ),
+                    'desc' => __( 'Textarea description', 'wes' ),
                     'type' => 'textarea'
                 ),
                 array(
                     'name' => 'checkbox',
-                    'label' => __( 'Checkbox', 'wedevs' ),
-                    'desc' => __( 'Checkbox Label', 'wedevs' ),
+                    'label' => __( 'Checkbox', 'wes' ),
+                    'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),
                 array(
                     'name' => 'radio',
-                    'label' => __( 'Radio Button', 'wedevs' ),
-                    'desc' => __( 'A radio button', 'wedevs' ),
+                    'label' => __( 'Radio Button', 'wes' ),
+                    'desc' => __( 'A radio button', 'wes' ),
                     'type' => 'radio',
                     'options' => array(
                         'yes' => 'Yes',
@@ -213,8 +213,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'multicheck',
-                    'label' => __( 'Multile checkbox', 'wedevs' ),
-                    'desc' => __( 'Multi checkbox description', 'wedevs' ),
+                    'label' => __( 'Multile checkbox', 'wes' ),
+                    'desc' => __( 'Multi checkbox description', 'wes' ),
                     'type' => 'multicheck',
                     'options' => array(
                         'one' => 'One',
@@ -225,8 +225,8 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'selectbox',
-                    'label' => __( 'A Dropdown', 'wedevs' ),
-                    'desc' => __( 'Dropdown description', 'wedevs' ),
+                    'label' => __( 'A Dropdown', 'wes' ),
+                    'desc' => __( 'Dropdown description', 'wes' ),
                     'type' => 'select',
                     'options' => array(
                         'yes' => 'Yes',
@@ -235,22 +235,22 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
                 ),
                 array(
                     'name' => 'password',
-                    'label' => __( 'Password', 'wedevs' ),
-                    'desc' => __( 'Password description', 'wedevs' ),
+                    'label' => __( 'Password', 'wes' ),
+                    'desc' => __( 'Password description', 'wes' ),
                     'type' => 'password',
                     'default' => ''
                 ),
                 array(
                     'name' => 'file',
-                    'label' => __( 'File', 'wedevs' ),
-                    'desc' => __( 'File description', 'wedevs' ),
+                    'label' => __( 'File', 'wes' ),
+                    'desc' => __( 'File description', 'wes' ),
                     'type' => 'file',
                     'default' => ''
                 ),
                 array(
                     'name' => 'color',
-                    'label' => __( 'Color', 'wedevs' ),
-                    'desc' => __( 'Color description', 'wedevs' ),
+                    'label' => __( 'Color', 'wes' ),
+                    'desc' => __( 'Color description', 'wes' ),
                     'type' => 'color',
                     'default' => ''
                 )
@@ -267,23 +267,23 @@ if ( !function_exists( 'wedevs_admin_init' ) ):
         $settings_api->admin_init();
     }
 endif;
-add_action( 'admin_init', 'wedevs_admin_init' );
+add_action( 'admin_init', 'wes_admin_init' );
 
-if ( !function_exists( 'wedevs_admin_menu' ) ):
+if ( !function_exists( 'wes_admin_menu' ) ):
     /**
      * Register the plugin page
      */
-    function wedevs_admin_menu() {
-        add_options_page( 'Settings API', 'Settings API', 'delete_posts', 'settings_api_test', 'wedevs_plugin_page' );
+    function wes_admin_menu() {
+        add_options_page( 'Settings API', 'Settings API', 'delete_posts', 'settings_api_test', 'wes_plugin_page' );
     }
 endif;
-add_action( 'admin_menu', 'wedevs_admin_menu' );
+add_action( 'admin_menu', 'wes_admin_menu' );
 
 /**
  * Display the plugin settings options page
  */
-if ( !function_exists( 'wedevs_plugin_page' ) ):
-    function wedevs_plugin_page() {
+if ( !function_exists( 'wes_plugin_page' ) ):
+    function wes_plugin_page() {
         $settings_api = new WeDevs_Settings_API;
 
         echo '<div class="wrap">';

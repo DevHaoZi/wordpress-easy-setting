@@ -538,7 +538,7 @@ class Easy_Setting {
                         settings_fields( $form['id'] );
                         do_settings_sections( $form['id'] );
                         do_action( 'wsa_form_bottom_' . $form['id'], $form );
-                        if ( isset( $this->settings_fields[ $form['id'] ] ) ):
+                        if (isset( $this->settings_fields[ $form['id'] ] ) && !(isset( $form['show_submit']) && !$form['show_submit'] )):
                         ?>
                         <div style="padding-left: 10px">
                             <?php submit_button(); ?>

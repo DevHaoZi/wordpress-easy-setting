@@ -34,12 +34,13 @@ class Easy_Setting_Test {
     function get_settings_sections() {
         $sections = array(
             array(
-                'id'    => 'wes_basics',
-                'title' => __( 'Basic Settings', 'wes' )
+                'id'          => 'wes_basics',
+                'title'       => __( 'Basic Settings', 'wes' )
             ),
             array(
-                'id'    => 'wes_advanced',
-                'title' => __( 'Advanced Settings', 'wes' )
+                'id'          => 'wes_advanced',
+                'title'       => __( 'Advanced Settings', 'wes' ),
+                'show_submit' => false
             )
         );
         return $sections;

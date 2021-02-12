@@ -5,8 +5,8 @@
  *
  * @author Tareq Hasan
  */
-if ( !class_exists('WeDevs_Settings_API_Test' ) ):
-class WeDevs_Settings_API_Test {
+if ( !class_exists('Easy_Setting_Test') ):
+class Easy_Setting_Test {
 
     private $settings_api;
 

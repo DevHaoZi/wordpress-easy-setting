@@ -5,16 +5,23 @@
  *
  * @author Tareq Hasan
  */
+
 if ( !class_exists('Easy_Setting_Test') ):
+
+/**
+ * 该宏用于标记在多站点模式下是否在全局中管理设置而不是针对单个站点管理
+ */
+define('WES_MULTIPLE_NETWORK', true /** 想在子站点管理设置就更改此处为false */ && is_multisite());
+
 class Easy_Setting_Test {
 
     private $settings_api;
 
     function __construct() {
-        $this->settings_api = new Easy_Setting;
+        $this->settings_api = new Easy_Setting();
 
         add_action( 'admin_init', array($this, 'admin_init') );
-        add_action( 'admin_menu', array($this, 'admin_menu') );
+        add_action( WES_MULTIPLE_NETWORK ? 'network_admin_menu' : 'admin_menu', array($this, 'admin_menu') );
     }
 
     function admin_init() {
@@ -28,7 +35,14 @@ class Easy_Setting_Test {
     }
 
     function admin_menu() {
-        add_options_page( 'Settings API', 'Settings API', 'delete_posts', 'settings_api_test', array($this, 'plugin_page') );
+        add_submenu_page(
+            WES_MULTIPLE_NETWORK ? 'settings.php' : 'options-general.php',
+            'Settings API',
+            'Settings API',
+            WES_MULTIPLE_NETWORK ? 'manage_network_options' : 'manage_options',
+            'settings_api_test',
+            [$this, 'plugin_page']
+        );
     }
 
     function get_settings_sections() {

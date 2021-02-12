@@ -29,6 +29,14 @@ class Easy_Setting {
     protected $settings_fields = array();
 
     public function __construct() {
+        if (!defined('WES_MULTIPLE_NETWORK')) {
+            define('WES_MULTIPLE_NETWORK', false);
+        }
+
+        if (WES_MULTIPLE_NETWORK) {
+            add_action( 'network_admin_edit_wsa-multiple-network-options', [$this, 'multiple_network_options'] );
+        }
+
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
     }
 
@@ -489,7 +497,7 @@ class Easy_Setting {
      */
     function get_option( $option, $section, $default = '' ) {
 
-        $options = get_option( $section );
+        $options = WES_MULTIPLE_NETWORK ? get_site_option($section) : get_option( $section );
 
         if ( isset( $options[$option] ) ) {
             return $options[$option];
@@ -528,11 +536,13 @@ class Easy_Setting {
      * This function displays every sections in a different form
      */
     function show_forms() {
-        ?>
+        if (isset($_GET['multiple-network-settings-updated'])): ?>
+            <div id="message" class="updated notice is-dismissible"><p><?php _e( 'Settings saved.' ) ?></p></div>
+        <?php endif; ?>
         <div class="metabox-holder">
             <?php foreach ( $this->settings_sections as $form ) { ?>
                 <div id="<?php echo $form['id']; ?>" class="group" style="display: none;">
-                    <form method="post" action="options.php">
+                    <form method="post" action="<?php echo WES_MULTIPLE_NETWORK ? 'edit.php?action=wsa-multiple-network-options' : 'options.php' ?>">
                         <?php
                         do_action( 'wsa_form_top_' . $form['id'], $form );
                         settings_fields( $form['id'] );
@@ -550,6 +560,29 @@ class Easy_Setting {
         </div>
         <?php
         $this->script();
+    }
+
+    /**
+     * 保存多站点模式下的选项
+     */
+    function multiple_network_options() {
+        $option_page = $_POST['option_page'];
+
+        check_admin_referer( $option_page.'-options');
+
+        global $new_whitelist_options;
+        $options = $new_whitelist_options[$option_page];
+
+        foreach ($options as $option) {
+            if (isset($_POST[$option])) {
+                update_site_option($option, $_POST[$option]);
+            } else {
+                delete_site_option($option);
+            }
+        }
+
+        wp_redirect(add_query_arg( 'multiple-network-settings-updated', 'true', $_POST['_wp_http_referer'] ));
+        exit;
     }
 
     /**

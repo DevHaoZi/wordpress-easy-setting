@@ -193,7 +193,7 @@ class Easy_Setting {
         $placeholder = empty( $args['placeholder'] ) ? '' : ' placeholder="' . $args['placeholder'] . '"';
 
         $html        = sprintf( '<input type="%1$s" class="%2$s-text" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"%6$s/>', $type, $size, $args['section'], $args['id'], $value, $placeholder );
-        $html       .= $this->get_field_description( $args );
+        $html        .= $this->get_field_description( $args );
 
         echo $html;
     }
@@ -222,7 +222,7 @@ class Easy_Setting {
         $step        = ( $args['step'] == '' ) ? '' : ' step="' . $args['step'] . '"';
 
         $html        = sprintf( '<input type="%1$s" class="%2$s-number" id="%3$s[%4$s]" name="%3$s[%4$s]" value="%5$s"%6$s%7$s%8$s%9$s/>', $type, $size, $args['section'], $args['id'], $value, $placeholder, $min, $max, $step );
-        $html       .= $this->get_field_description( $args );
+        $html        .= $this->get_field_description( $args );
 
         echo $html;
     }
@@ -255,7 +255,7 @@ class Easy_Setting {
 
         $value = $this->get_option( $args['id'], $args['section'], $args['std'] );
         $html  = '<fieldset>';
-        $html .= sprintf( '<input type="hidden" name="%1$s[%2$s]" value="" />', $args['section'], $args['id'] );
+        $html  .= sprintf( '<input type="hidden" name="%1$s[%2$s]" value="" />', $args['section'], $args['id'] );
         foreach ( $args['options'] as $key => $label ) {
             $checked = isset( $value[$key] ) ? $value[$key] : '0';
             $html    .= sprintf( '<label for="wpuf-%1$s[%2$s][%3$s]">', $args['section'], $args['id'], $key );
@@ -631,8 +631,7 @@ class Easy_Setting {
 
                 if (activetab != '' && $(activetab + '-tab').length ) {
                     $(activetab + '-tab').addClass('nav-tab-active');
-                }
-                else {
+                } else {
                     $('.nav-tab-wrapper a:first').addClass('nav-tab-active');
                 }
                 $('.nav-tab-wrapper a').click(function(evt) {

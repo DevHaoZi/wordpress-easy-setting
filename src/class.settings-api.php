@@ -141,6 +141,7 @@ class Easy_Setting {
                     'class'             => isset( $option['class'] ) ? $option['class'] : $name,
                     'label_for'         => "{$section}[{$name}]",
                     'desc'              => isset( $option['desc'] ) ? $option['desc'] : '',
+                    'value'             => isset( $option['value'] ) ? $option['value'] : '',
                     'name'              => $label,
                     'section'           => $section,
                     'size'              => isset( $option['size'] ) ? $option['size'] : null,
@@ -239,7 +240,7 @@ class Easy_Setting {
         $html  .= sprintf( '<label for="wpuf-%1$s[%2$s]">', $args['section'], $args['id'] );
         $html  .= sprintf( '<input type="hidden" name="%1$s[%2$s]" value="off" />', $args['section'], $args['id'] );
         $html  .= sprintf( '<input type="checkbox" class="checkbox" id="wpuf-%1$s[%2$s]" name="%1$s[%2$s]" value="on" %3$s />', $args['section'], $args['id'], checked( $value, 'on', false ) );
-        $html  .= sprintf( '%1$s</label>', $args['desc'] );
+        $html  .= sprintf( '%1$s<p class="description">%2$s</p></label>', $args['value'], $args['desc'] );
         $html  .= '</fieldset>';
 
         echo $html;

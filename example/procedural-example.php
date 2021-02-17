@@ -260,7 +260,7 @@ if ( !function_exists( 'wes_admin_init' ) ):
             )
         );
 
-        $settings_api = new WeDevs_Settings_API;
+        $settings_api = new Easy_Setting;
 
         //set sections and fields
         $settings_api->set_sections( $sections );
@@ -287,7 +287,7 @@ add_action( 'admin_menu', 'wes_admin_menu' );
  */
 if ( !function_exists( 'wes_plugin_page' ) ):
     function wes_plugin_page() {
-        $settings_api = new WeDevs_Settings_API;
+        $settings_api = new Easy_Setting;
 
         echo '<div class="wrap">';
         settings_errors();

@@ -47,6 +47,7 @@ if ( !function_exists( 'wes_admin_init' ) ):
                 array(
                     'name' => 'checkbox',
                     'label' => __( 'Checkbox', 'wes' ),
+                    'value' => __( 'Checkbox Label', 'wes' ),
                     'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),
@@ -122,6 +123,7 @@ if ( !function_exists( 'wes_admin_init' ) ):
                 array(
                     'name' => 'checkbox',
                     'label' => __( 'Checkbox', 'wes' ),
+                    'value' => __( 'Checkbox Label', 'wes' ),
                     'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),
@@ -198,6 +200,7 @@ if ( !function_exists( 'wes_admin_init' ) ):
                 array(
                     'name' => 'checkbox',
                     'label' => __( 'Checkbox', 'wes' ),
+                    'value' => __( 'Checkbox Label', 'wes' ),
                     'desc' => __( 'Checkbox Label', 'wes' ),
                     'type' => 'checkbox'
                 ),

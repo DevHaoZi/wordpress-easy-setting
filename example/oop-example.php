@@ -104,6 +104,7 @@ class Easy_Setting_Test {
                 array(
                     'name'  => 'checkbox',
                     'label' => __( 'Checkbox', 'wes' ),
+                    'value' => __( 'Checkbox Label', 'wes' ),
                     'desc'  => __( 'Checkbox Label', 'wes' ),
                     'type'  => 'checkbox'
                 ),
